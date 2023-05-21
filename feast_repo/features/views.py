@@ -49,17 +49,17 @@ customer_stats = FeatureView(
     },
 )
 
-# merchant_stats = FeatureView(
-#     name="merchant_stats",
-#     entities=["merchant_id"],
-#     features=[
-#         Feature(name="vertical", dtype=ValueType.STRING),
-#         Feature(name="rank", dtype=ValueType.INT64)],
-#     ttl=timedelta(days=7),
-#     batch_source=merchant_stats_parquet_file_source,
-#     tags={
-#         'authors': "Benjamin Tan <benjamin.tan@tech.jago.com, Varun Mallya <varun.mallya@tech.jago.com",
-#         'description': 'Insight types, but using the copied table',
-#         'used_by': 'Customer_Retention_Team,Merchant_Aquisition_Team',
-#     },
-# )
+merchant_stats = FeatureView(
+    name="merchant_stats",
+    entities=["merchant_id"],
+    features=[
+        Feature(name="vertical", dtype=ValueType.STRING),
+        Feature(name="rank", dtype=ValueType.INT64)],
+    ttl=timedelta(days=7),
+    batch_source=merchant_stats_parquet_file_source,
+    tags={
+        'authors': "Benjamin Tan <benjamin.tan@tech.jago.com, Varun Mallya <varun.mallya@tech.jago.com",
+        'description': 'Insight types, but using the copied table',
+        'used_by': 'Customer_Retention_Team,Merchant_Aquisition_Team',
+    },
+)
