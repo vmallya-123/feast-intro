@@ -1,4 +1,4 @@
-from features.views import customer_demo,merchant_stats,customer_stats
+from features.views import customer_demo,customer_stats
 from feast.feature_service import FeatureService
 
 customer_engagement_feature_svc = FeatureService(

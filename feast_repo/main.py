@@ -27,7 +27,7 @@ feature_service = feature_store.get_feature_service("customer_engagement")
 online_features_from_service = feature_store.get_online_features(
     features=feature_service, entity_rows=[entity_dict]
 )
-print(online_features_from_service.to_df())
+# print(online_features_from_service.to_df())
 
 offline_features_from_service = feature_store.get_historical_features(features=feature_service, entity_df=entity_df)
 #print(offline_features_from_service.to_df())
